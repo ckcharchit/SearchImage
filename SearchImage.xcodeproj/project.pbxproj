@@ -37,6 +37,7 @@
 		432C7656247AC340002CFB78 /* ImageDownloaderFileExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432C7655247AC340002CFB78 /* ImageDownloaderFileExtension.swift */; };
 		432C765A247AC3B9002CFB78 /* fetchSearchListError.json in Resources */ = {isa = PBXBuildFile; fileRef = 432C7658247AC3B9002CFB78 /* fetchSearchListError.json */; };
 		432C765B247AC3B9002CFB78 /* fetchSearchListSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = 432C7659247AC3B9002CFB78 /* fetchSearchListSuccess.json */; };
+		432C765F247B0EBE002CFB78 /* ImagePreviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432C765E247B0EBE002CFB78 /* ImagePreviewPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		432C7655247AC340002CFB78 /* ImageDownloaderFileExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderFileExtension.swift; sourceTree = "<group>"; };
 		432C7658247AC3B9002CFB78 /* fetchSearchListError.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fetchSearchListError.json; sourceTree = "<group>"; };
 		432C7659247AC3B9002CFB78 /* fetchSearchListSuccess.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fetchSearchListSuccess.json; sourceTree = "<group>"; };
+		432C765E247B0EBE002CFB78 /* ImagePreviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				432C763E247AAA89002CFB78 /* ImagePreviewViewController.swift */,
+				432C765E247B0EBE002CFB78 /* ImagePreviewPageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				432C7624247A9EB1002CFB78 /* Enums.swift in Sources */,
 				432C763B247AAA58002CFB78 /* ImagePreviewPresentator.swift in Sources */,
 				432C761B247A9D9B002CFB78 /* ImageOperation.swift in Sources */,
+				432C765F247B0EBE002CFB78 /* ImagePreviewPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

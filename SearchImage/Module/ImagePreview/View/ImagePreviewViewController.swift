@@ -10,23 +10,22 @@ import UIKit
 
 class ImagePreviewViewController: UIViewController {
     @IBOutlet weak var imageDetailPreview: UIImageView!
+
     var presenter : ImagePreviewPresentator!
+    var model: ImageModel!
+    var photoIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = ""//presenter.model.title
+        imageDetailPreview.setDownloadedImage(with: model.largeImageURL, placeholderImage: imageDetailPreview.image) { (image, error) -> (Void) in
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.prefersLargeTitles = false
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        imageDetailPreview.setDownloadedImage(with: presenter.model.largeImageURL, placeholderImage: imageDetailPreview.image) { (image, error) -> (Void) in
-        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

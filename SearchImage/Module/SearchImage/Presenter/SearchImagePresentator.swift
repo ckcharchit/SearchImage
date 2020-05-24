@@ -38,6 +38,9 @@ class SearchImagePresentator: SearchImagePresentation {
         arrayImages.removeAll()
         getImages()
         arraySearches.reverse()
+        if arraySearches.count > 9 {
+            arraySearches.removeFirst()
+        }
         for i in 0..<arraySearches.count {
             if arraySearches[i] == text {
                 indexToRemove = i
@@ -63,8 +66,7 @@ class SearchImagePresentator: SearchImagePresentation {
     }
     
     func pushDetailImage(indexPath: IndexPath, image: UIImage?) {
-        let model = arrayImages[indexPath.row]
-        router.pushImageDetailViewController(model: model, image: image)
+        router.pushImageDetailViewController(model: arrayImages, image: image, index: indexPath.row)
     }
 
     func numberOfSearches() -> Int {

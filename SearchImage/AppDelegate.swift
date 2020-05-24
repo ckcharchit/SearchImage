@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vc = SearchImageRouter.assembleModule()
         window?.rootViewController = UINavigationController(rootViewController: vc)
         window?.makeKeyAndVisible()
+        
+        let pageControl = UIPageControl.appearance()
+        pageControl.pageIndicatorTintColor = UIColor.systemGray
+        pageControl.currentPageIndicatorTintColor = UIColor.systemPurple
         return true
     }
 

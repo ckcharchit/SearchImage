@@ -16,7 +16,6 @@ class SearchImageViewController: UIViewController {
     private var selectedFrame : CGRect?
     private var navigationInteractor : NavigationInteractor?
     private var selectedImage:UIImage?
-//    private var suggestionTableView: UITableView!
     
     @IBOutlet weak var collectionViewImages: UICollectionView!
     @IBOutlet weak var suggestionTableView: UITableView!
@@ -46,12 +45,8 @@ class SearchImageViewController: UIViewController {
     }
 
     private func setupSuggestionTableView() {
-//        suggestionTableView = UITableView(frame: .init(x: 0, y: 80, width: self.view.frame.width, height: self.view.frame.height * 0.45), style: .plain)
-//        suggestionTableView.delegate = self
-//        suggestionTableView.dataSource = self
         suggestionTableView.isScrollEnabled = true
         suggestionTableView.isHidden = true
-//        self.view.addSubview(suggestionTableView)
     }
 }
 

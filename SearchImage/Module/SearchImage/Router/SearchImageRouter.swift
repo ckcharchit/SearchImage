@@ -31,8 +31,8 @@ class SearchImageRouter: SearchImageWireframe {
         return view
     }
     
-    func pushImageDetailViewController(model: ImageModel,image: UIImage?) {
-        let viewControllerPreview = ImagePreviewRouter.assembleModule(model: model, image: image)
+    func pushImageDetailViewController(model: [ImageModel],image: UIImage?, index: Int) {
+        let viewControllerPreview = ImagePreviewRouter.assembleModule(model: model, image: image, index: index)
         viewController?.navigationController?.pushViewController(viewControllerPreview, animated: true)
     }
     

@@ -38,6 +38,6 @@ protocol SearchImagePresentation: class {
 }
 
 protocol SearchImageWireframe: class {
-    func pushImageDetailViewController(model: ImageModel,image: UIImage?)
+    func pushImageDetailViewController(model: [ImageModel],image: UIImage?, index: Int)
     func showError(error: String)
 }

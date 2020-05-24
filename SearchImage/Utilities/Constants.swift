@@ -12,10 +12,9 @@ let kPageSize = 50
 let kUnknownError = "An Unknown error has occured"
 let kNoInternetConnection = "Please check your Internet connection and try again."
 
-let kFlickrAPIKey = "2c621073cb6aa5c12ef5aa14aa4cdcb0"
-let kFlickrAPISecret = "db808e1145d70dce"
+let kPixabayAPIKey = "16576202-62c78c26f5e194d7f7842a23b"
 
-let kBaseURL = "https://pixabay.com/api/?key=16576202-62c78c26f5e194d7f7842a23b"
+let kBaseURL = "https://pixabay.com/api/?key=\(kPixabayAPIKey)"
 
 let kSearchURL = "\(kBaseURL)&q=%@&&image_type=photo"
 

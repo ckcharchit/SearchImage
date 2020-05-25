@@ -35,6 +35,8 @@ protocol SearchImagePresentation: class {
     func pushDetailImage(indexPath: IndexPath, image: UIImage?)
     func numberOfSearches() -> Int
     func searchText(indexPath: IndexPath) -> String?
+    func fetchDataPersisted()
+    func persistData(text: String?)
 }
 
 protocol SearchImageWireframe: class {

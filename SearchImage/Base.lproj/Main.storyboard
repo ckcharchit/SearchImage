@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wMp-Hz-dUD">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +26,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="esm-1A-zlf" customClass="ImageCollectionViewCell" customModule="ImageDownloader" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="esm-1A-zlf" customClass="ImageCollectionViewCell" customModule="SearchImage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -58,49 +59,53 @@
                                     <outlet property="delegate" destination="SvE-vN-Nxx" id="G9D-I3-ZgE"/>
                                 </connections>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SPg-I6-z9Y">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TbT-m5-1J1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="yAa-aV-hO9"/>
+                                </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SuggestionTableViewCell" id="jwe-Yl-TaW" customClass="SuggestionTableViewCell" customModule="ImageDownloader" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SuggestionTableViewCell" id="9dU-pt-AQQ" customClass="SuggestionTableViewCell" customModule="SearchImage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jwe-Yl-TaW" id="olZ-dT-DCf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9dU-pt-AQQ" id="OK8-Ko-Gr5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qn-QH-ilN">
-                                                    <rect key="frame" x="16" y="11.5" width="343" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsn-HY-clP">
+                                                    <rect key="frame" x="16" y="12" width="343" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0Qn-QH-ilN" firstAttribute="centerY" secondItem="olZ-dT-DCf" secondAttribute="centerY" id="1vW-Um-7qJ"/>
-                                                <constraint firstAttribute="trailing" secondItem="0Qn-QH-ilN" secondAttribute="trailing" constant="16" id="Gmp-Sl-4zY"/>
-                                                <constraint firstItem="0Qn-QH-ilN" firstAttribute="leading" secondItem="olZ-dT-DCf" secondAttribute="leading" constant="16" id="rmF-Az-2Op"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wsn-HY-clP" secondAttribute="bottom" constant="12" id="1rt-C0-7Mr"/>
+                                                <constraint firstItem="Wsn-HY-clP" firstAttribute="top" secondItem="OK8-Ko-Gr5" secondAttribute="top" constant="12" id="764-az-Vqx"/>
+                                                <constraint firstItem="Wsn-HY-clP" firstAttribute="leading" secondItem="OK8-Ko-Gr5" secondAttribute="leading" constant="16" id="ItW-0a-spB"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wsn-HY-clP" secondAttribute="trailing" constant="16" id="c5p-KH-q11"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="suggestionLabel" destination="0Qn-QH-ilN" id="bp5-e7-Kxx"/>
+                                            <outlet property="suggestionLabel" destination="Wsn-HY-clP" id="cwc-4h-UTX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="SvE-vN-Nxx" id="FOQ-Gz-d7E"/>
-                                    <outlet property="delegate" destination="SvE-vN-Nxx" id="kE5-VK-dww"/>
+                                    <outlet property="dataSource" destination="SvE-vN-Nxx" id="9Tf-FX-DuR"/>
+                                    <outlet property="delegate" destination="SvE-vN-Nxx" id="pc5-te-gnp"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TbT-m5-1J1" secondAttribute="trailing" id="9V7-lG-9yb"/>
                             <constraint firstItem="0L2-m8-VH8" firstAttribute="trailing" secondItem="hBq-xt-eoB" secondAttribute="trailing" id="Ea5-3f-eqn"/>
                             <constraint firstItem="0L2-m8-VH8" firstAttribute="bottom" secondItem="hBq-xt-eoB" secondAttribute="bottom" id="P1f-kE-4o1"/>
-                            <constraint firstItem="SPg-I6-z9Y" firstAttribute="leading" secondItem="0L2-m8-VH8" secondAttribute="leading" id="TI5-Gs-GN2"/>
                             <constraint firstItem="0L2-m8-VH8" firstAttribute="top" secondItem="hBq-xt-eoB" secondAttribute="top" id="YOt-8y-oTW"/>
-                            <constraint firstItem="SPg-I6-z9Y" firstAttribute="trailing" secondItem="0L2-m8-VH8" secondAttribute="trailing" id="q1w-Ow-cIT"/>
+                            <constraint firstItem="TbT-m5-1J1" firstAttribute="leading" secondItem="jeM-lJ-SYW" secondAttribute="leading" id="gjZ-VX-uOx"/>
+                            <constraint firstItem="TbT-m5-1J1" firstAttribute="top" secondItem="jeM-lJ-SYW" secondAttribute="top" id="p7O-CQ-1a7"/>
                             <constraint firstItem="0L2-m8-VH8" firstAttribute="leading" secondItem="hBq-xt-eoB" secondAttribute="leading" id="xnP-HV-zlb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hBq-xt-eoB"/>
@@ -108,7 +113,8 @@
                     <navigationItem key="navigationItem" title="Search Image" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="KIT-iB-5FY"/>
                     <connections>
                         <outlet property="collectionViewImages" destination="0L2-m8-VH8" id="Rdc-w7-reQ"/>
-                        <outlet property="suggestionTableView" destination="SPg-I6-z9Y" id="WZN-b7-3Af"/>
+                        <outlet property="suggestionTableView" destination="TbT-m5-1J1" id="aHx-Vf-jCf"/>
+                        <outlet property="tableViewHeightConstraint" destination="yAa-aV-hO9" id="yPt-au-rhf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixu-lV-z2T" sceneMemberID="firstResponder"/>

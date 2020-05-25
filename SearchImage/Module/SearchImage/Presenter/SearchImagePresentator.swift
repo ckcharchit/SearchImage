@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class SearchImagePresentator: SearchImagePresentation {
     weak var view: SearchImageView?
     var interactor: SearchImageUseCase!
     var router: SearchImageWireframe!
+    
+    var searchText: [NSManagedObject] = []
     
     private var pageNo = 1
     private var totalPages = 1
@@ -50,6 +53,7 @@ class SearchImagePresentator: SearchImagePresentation {
             arraySearches.remove(at: index)
         }
         arraySearches.append(text)
+        persistData(text: text)
         arraySearches.reverse()
     }
     
@@ -76,6 +80,44 @@ class SearchImagePresentator: SearchImagePresentation {
     func searchText(indexPath: IndexPath) -> String? {
         let text = arraySearches[indexPath.row]
         return text
+    }
+
+    func fetchDataPersisted() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Suggestion")
+
+        do {
+          searchText = try managedContext.fetch(fetchRequest)
+            for item in searchText {
+                if let val = item.value(forKeyPath: "text") as? String {
+                    arraySearches.append(val)
+                }
+            }
+        } catch let error as NSError {
+          print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func persistData(text: String?) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Suggestion", in: managedContext)!
+        let searches = NSManagedObject(entity: entity, insertInto: managedContext)
+        searches.setValue(text, forKeyPath: "text")
+
+        do {
+          try managedContext.save()
+          searchText.append(searches)
+        } catch let error as NSError {
+          print("Could not save. \(error), \(error.userInfo)")
+        }
     }
 }
 

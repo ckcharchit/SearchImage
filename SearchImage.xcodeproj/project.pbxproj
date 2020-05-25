@@ -38,6 +38,7 @@
 		432C765A247AC3B9002CFB78 /* fetchSearchListError.json in Resources */ = {isa = PBXBuildFile; fileRef = 432C7658247AC3B9002CFB78 /* fetchSearchListError.json */; };
 		432C765B247AC3B9002CFB78 /* fetchSearchListSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = 432C7659247AC3B9002CFB78 /* fetchSearchListSuccess.json */; };
 		432C765F247B0EBE002CFB78 /* ImagePreviewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432C765E247B0EBE002CFB78 /* ImagePreviewPageViewController.swift */; };
+		432C7662247B3197002CFB78 /* SuggestionList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 432C7660247B3197002CFB78 /* SuggestionList.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		432C7658247AC3B9002CFB78 /* fetchSearchListError.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fetchSearchListError.json; sourceTree = "<group>"; };
 		432C7659247AC3B9002CFB78 /* fetchSearchListSuccess.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fetchSearchListSuccess.json; sourceTree = "<group>"; };
 		432C765E247B0EBE002CFB78 /* ImagePreviewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewPageViewController.swift; sourceTree = "<group>"; };
+		432C7661247B3197002CFB78 /* SuggestionList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SuggestionList.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				432C7600247A950F002CFB78 /* Assets.xcassets */,
 				432C7602247A950F002CFB78 /* LaunchScreen.storyboard */,
 				432C7605247A950F002CFB78 /* Info.plist */,
+				432C7660247B3197002CFB78 /* SuggestionList.xcdatamodeld */,
 			);
 			path = SearchImage;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				432C763B247AAA58002CFB78 /* ImagePreviewPresentator.swift in Sources */,
 				432C761B247A9D9B002CFB78 /* ImageOperation.swift in Sources */,
 				432C765F247B0EBE002CFB78 /* ImagePreviewPageViewController.swift in Sources */,
+				432C7662247B3197002CFB78 /* SuggestionList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +707,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		432C7660247B3197002CFB78 /* SuggestionList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				432C7661247B3197002CFB78 /* SuggestionList.xcdatamodel */,
+			);
+			currentVersion = 432C7661247B3197002CFB78 /* SuggestionList.xcdatamodel */;
+			path = SuggestionList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 432C75EC247A950C002CFB78 /* Project object */;
 }

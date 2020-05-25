@@ -19,6 +19,7 @@ class SearchImageViewController: UIViewController {
     
     @IBOutlet weak var collectionViewImages: UICollectionView!
     @IBOutlet weak var suggestionTableView: UITableView!
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class SearchImageViewController: UIViewController {
         searchBarController.dimsBackgroundDuringPresentation = false
         navigationItem.searchController = searchBarController
         navigationItem.hidesSearchBarWhenScrolling = false
+        presenter.fetchDataPersisted()
     }
     
     private func setupNavigation() { // update navigation bar
